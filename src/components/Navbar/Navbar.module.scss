@@ -1,0 +1,165 @@
+@use '../../styles/variables' as *;
+
+.navbar {
+  font-family: $font-primary; // Now this will work
+  // ... rest of your styles
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 0;
+  z-index: 100;
+  transition: all 0.3s ease;
+  
+  &.scrolled {
+    background: rgba($color-white, 0.95);
+    box-shadow: $shadow-sm;
+    padding: 1rem 0;
+    
+    .logo {
+      color: $color-black;
+    }
+    
+    .navLinks ul li a {
+      color: $color-black;
+      
+      &:hover {
+        color: $color-primary;
+      }
+    }
+    
+    .iconButton {
+      color: $color-black;
+    }
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: $color-white;
+  text-decoration: none;
+  
+  span {
+    color: $color-primary;
+  }
+}
+
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  color: $color-white;
+  font-size: 2.4rem;
+  cursor: pointer;
+  
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
+.navLinks {
+  ul {
+    display: flex;
+    gap: $spacing-lg;
+    
+    li {
+      list-style: none;
+      
+      a {
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: $color-white;
+        transition: color 0.3s ease;
+        
+        &:hover {
+          color: $color-primary-light;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100vh;
+    background: $color-white;
+    z-index: 1000;
+    transition: left 0.3s ease;
+    padding: $spacing-xl;
+    
+    &.open {
+      left: 0;
+    }
+    
+    ul {
+      flex-direction: column;
+      margin-top: $spacing-xl;
+      
+      li a {
+        color: $color-black;
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+.closeButton {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2.4rem;
+  color: $color-black;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
+.icons {
+  display: flex;
+  gap: $spacing-md;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  color: $color-white;
+  font-size: 2rem;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: $color-primary-light;
+  }
+}
+
+.cartCount {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: $color-primary;
+  color: $color-white;
+  width: 20px;
+  height: 20px;
+  border-radius: $border-radius-full;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 700;
+}

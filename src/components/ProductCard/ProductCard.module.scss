@@ -1,0 +1,103 @@
+@use '../../styles/variables' as *;
+
+.productCard {
+  position: relative;
+  background: $color-white;
+  border-radius: $border-radius-md;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.productImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  
+  .productCard:hover & {
+    transform: scale(1.05);
+  }
+}
+
+.badge {
+  position: absolute;
+  top: $spacing-sm;
+  left: $spacing-sm;
+  background: $color-primary;
+  color: $color-white;
+  padding: $spacing-xs $spacing-sm;
+  border-radius: $border-radius-sm;
+  font-size: 1.2rem;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.actions {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: $spacing-sm;
+  padding: $spacing-sm;
+  background: rgba($color-white, 0.9);
+  transition: all 0.3s ease;
+  
+  &.visible {
+    bottom: 0;
+  }
+}
+
+.actionButton {
+  width: 40px;
+  height: 40px;
+  border-radius: $border-radius-full;
+  background: $color-white;
+  color: $color-black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  box-shadow: $shadow-sm;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: $color-primary;
+    color: $color-white;
+    transform: translateY(-3px);
+  }
+  
+  &.active {
+    background: $color-primary;
+    color: $color-white;
+  }
+}
+
+.productInfo {
+  padding: $spacing-md;
+  text-align: center;
+}
+
+.productName {
+  font-size: 1.6rem;
+  margin-bottom: $spacing-xs;
+}
+
+.productPrice {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: $color-primary;
+}
