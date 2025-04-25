@@ -9,7 +9,6 @@ A sleek, responsive, and visually impressive fashion e-commerce website built us
 - 🖼️ High-Quality Product Grid layout
 - 💡 Reusable Components (Navbar, Hero, ProductCard, Footer)
 - 📱 Responsive Design for all screen sizes
-- 🎥 Framer Motion Animations
 - 📦 Organized Project Structure
 - 🧠 Clean Code & Scalable Architecture
 
