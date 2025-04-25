@@ -20,9 +20,6 @@ A sleek, responsive, and visually impressive fashion e-commerce website built us
 - Icons: React Icons  
 - Animations: Framer Motion
 
-_________________________________________________________________________________________________________________________
-🔗 Live Demo: [https://afom12.github.io/Fashion_Hub/](https://afom12.github.io/Fashion_Hub/)
-
 ### 1. Clone the repository
 
 ```bash
