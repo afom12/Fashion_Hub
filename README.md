@@ -1,6 +1,5 @@
 
 
-
 # 🛍️ Modern Fashion Clothing Website
 
 A sleek, responsive, and visually impressive fashion e-commerce website built using React, Vite, and SCSS. The project showcases a bold welcome experience, smooth animations, and an elegant product display—perfect for modern fashion brands and designers.
